@@ -1,0 +1,78 @@
+<!-- trodha.client/src/app/dashboard/dashboard.component.html -->
+<div class="dashboard-container">
+  <h1>Hoş Geldiniz, {{currentUser?.firstName}}!</h1>
+
+  <div *ngIf="error" class="alert alert-danger">{{error}}</div>
+
+  <div *ngIf="loading" class="spinner-border" role="status">
+    <span class="visually-hidden">Yükleniyor...</span>
+  </div>
+
+  <div *ngIf="!loading" class="dashboard-content">
+    <!-- Özet İstatistikler -->
+    <div class="statistics-card">
+      <h2>Özet İstatistikler</h2>
+      <div class="statistics-grid">
+        <div class="stat-item">
+          <span class="stat-value">{{statistics['ActiveGoalsCount'] || 0}}</span>
+          <span class="stat-label">Aktif Hedef</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">{{statistics['LowImportanceCount'] || 0}}</span>
+          <span class="stat-label">Düşük Önem</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">{{statistics['MediumImportanceCount'] || 0}}</span>
+          <span class="stat-label">Orta Önem</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">{{statistics['HighImportanceCount'] || 0}}</span>
+          <span class="stat-label">Yüksek Önem</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Günlük Öneri -->
+    <div *ngIf="recommendation" class="recommendation-card">
+      <h2>Günün Önerisi</h2>
+      <app-recommendation-card [recommendation]="recommendation"></app-recommendation-card>
+    </div>
+
+    <!-- Aktif Hedefler -->
+    <div class="active-goals">
+      <h2>Aktif Hedefleriniz</h2>
+
+      <div *ngIf="activeGoals.length === 0" class="no-goals">
+        <p>Henüz aktif hedefleriniz bulunmuyor.</p>
+        <a routerLink="/goals/create" class="btn btn-primary">Yeni Hedef Ekle</a>
+      </div>
+
+      <ul *ngIf="activeGoals.length > 0" class="goal-list">
+        <li *ngFor="let goal of activeGoals" class="goal-item">
+          <div class="goal-header">
+            <h3>{{goal.title}}</h3>
+            <span class="badge" [ngClass]="{'badge-low': goal.importanceLevelId === 1, 'badge-medium': goal.importanceLevelId === 2, 'badge-high': goal.importanceLevelId === 3}">
+              {{goal.importanceLevelName}}
+            </span>
+          </div>
+          <p *ngIf="goal.description">{{goal.description}}</p>
+          <div class="goal-progress">
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" [style.width.%]="(goal.completedCount / goal.targetCount) * 100">
+                {{goal.completedCount}}/{{goal.targetCount}}
+              </div>
+            </div>
+          </div>
+          <div class="goal-actions">
+            <a [routerLink]="['/goals', goal.goalId]" class="btn btn-sm btn-info">Detaylar</a>
+            <a [routerLink]="['/goal-statuses/create']" [queryParams]="{goalId: goal.goalId}" class="btn btn-sm btn-success">Durum Ekle</a>
+          </div>
+        </li>
+      </ul>
+
+      <div class="view-all">
+        <a routerLink="/goals" class="btn btn-outline-primary">Tüm Hedefleri Görüntüle</a>
+      </div>
+    </div>
+  </div>
+</div>

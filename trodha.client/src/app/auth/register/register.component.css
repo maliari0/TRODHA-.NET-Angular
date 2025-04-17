@@ -1,0 +1,82 @@
+.register-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: 500;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.alert {
+  margin-bottom: 15px;
+}
+
+.col-md-6 {
+  padding: 0 10px;
+}
+
+.row {
+  margin: 0 -10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.password-guidelines {
+  background-color: #f8f9fa;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+  .password-guidelines p {
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+
+  .password-guidelines ul {
+    padding-left: 20px;
+    margin-bottom: 0;
+  }
+
+  .password-guidelines li {
+    margin-bottom: 3px;
+  }
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.small {
+  font-size: 85%;
+}
+
+.text-muted {
+  color: #6c757d;
+}

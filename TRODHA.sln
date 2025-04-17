@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "trodha.client", "trodha.client\trodha.client.esproj", "{9BEB1FFF-91C7-DF79-8243-1149C0A4B32F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TRODHA.Server", "TRODHA.Server\TRODHA.Server.csproj", "{6E64062D-DC91-46F8-B9E3-E56FDEF2340F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TRODHA.Core", "TRODHA.Core\TRODHA.Core.csproj", "{6573981D-06BB-4DFB-A031-1892EB0CE3D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TRODHA.Infrastructure", "TRODHA.Infrastructure\TRODHA.Infrastructure.csproj", "{839DA649-EC24-48C2-ACEA-47E9EB28CF37}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TRODHA.Application", "TRODHA.Application\TRODHA.Application.csproj", "{D29932BA-55CC-4E59-876C-30391D40626D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9BEB1FFF-91C7-DF79-8243-1149C0A4B32F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BEB1FFF-91C7-DF79-8243-1149C0A4B32F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BEB1FFF-91C7-DF79-8243-1149C0A4B32F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{9BEB1FFF-91C7-DF79-8243-1149C0A4B32F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BEB1FFF-91C7-DF79-8243-1149C0A4B32F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BEB1FFF-91C7-DF79-8243-1149C0A4B32F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{6E64062D-DC91-46F8-B9E3-E56FDEF2340F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E64062D-DC91-46F8-B9E3-E56FDEF2340F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E64062D-DC91-46F8-B9E3-E56FDEF2340F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E64062D-DC91-46F8-B9E3-E56FDEF2340F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6573981D-06BB-4DFB-A031-1892EB0CE3D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6573981D-06BB-4DFB-A031-1892EB0CE3D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6573981D-06BB-4DFB-A031-1892EB0CE3D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6573981D-06BB-4DFB-A031-1892EB0CE3D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{839DA649-EC24-48C2-ACEA-47E9EB28CF37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{839DA649-EC24-48C2-ACEA-47E9EB28CF37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{839DA649-EC24-48C2-ACEA-47E9EB28CF37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{839DA649-EC24-48C2-ACEA-47E9EB28CF37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D29932BA-55CC-4E59-876C-30391D40626D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D29932BA-55CC-4E59-876C-30391D40626D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D29932BA-55CC-4E59-876C-30391D40626D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D29932BA-55CC-4E59-876C-30391D40626D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1ED0A33F-EFD3-4709-B042-AC1685F76BAC}
+	EndGlobalSection
+EndGlobal

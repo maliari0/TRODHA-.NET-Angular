@@ -1,0 +1,36 @@
+<div class="login-container">
+  <h2>Giriş Yap</h2>
+
+  <div *ngIf="error" class="alert alert-danger">{{error}}</div>
+
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="email">E-posta</label>
+      <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['email'].errors }" />
+      <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+        <div *ngIf="f['email'].errors['required']">E-posta gerekli</div>
+        <div *ngIf="f['email'].errors['email']">Geçerli bir e-posta adresi girin</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Şifre</label>
+      <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['password'].errors }" />
+      <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+        <div *ngIf="f['password'].errors['required']">Şifre gerekli</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <button [disabled]="loading" class="btn btn-primary">
+        <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+        Giriş Yap
+      </button>
+      <a routerLink="/forgot-password" class="btn btn-link">Şifremi Unuttum</a>
+    </div>
+
+    <div class="register-link">
+      Hesabınız yok mu? <a routerLink="/register">Kaydolun</a>
+    </div>
+  </form>
+</div>
