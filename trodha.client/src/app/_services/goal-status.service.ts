@@ -8,7 +8,7 @@ import { CreateGoalStatus, GoalStatus, GoalStatusReport } from '../_models/goal-
   providedIn: 'root'
 })
 export class GoalStatusService {
-  private apiUrl = '/api/goal-statuses';
+  private apiUrl = 'http://localhost:5253/api/goal-statuses';
 
   constructor(private http: HttpClient) { }
 

@@ -8,7 +8,7 @@ import { Recommendation } from '../_models/recommendation.model';
   providedIn: 'root'
 })
 export class RecommendationService {
-  private apiUrl = '/api/recommendations';
+  private apiUrl = 'http://localhost:5253/api/recommendations';
 
   constructor(private http: HttpClient) { }
 

@@ -112,11 +112,11 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
+// CORS ayarlarını güncelle - frontend'den gelen isteklere izin ver
 app.UseCors(builder => builder
-    .WithOrigins("http://localhost:4200", "https://localhost:7056", "http://localhost:5173", "https://127.0.0.1:57438", "https://localhost:57438")
+    .AllowAnyOrigin() // Geliştirme ortamında tüm originlere izin ver
     .AllowAnyMethod()
-    .AllowAnyHeader()
-    .AllowCredentials());
+    .AllowAnyHeader());
 
 app.UseAuthentication();
 app.UseAuthorization();

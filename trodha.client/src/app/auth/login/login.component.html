@@ -29,7 +29,13 @@
       <a routerLink="/forgot-password" class="btn btn-link">Şifremi Unuttum</a>
     </div>
 
-    <div class="register-link">
+    <div class="admin-login mt-3">
+      <button type="button" class="btn btn-secondary btn-sm" (click)="loginAsAdmin()">
+        Admin olarak giriş yap
+      </button>
+    </div>
+
+    <div class="register-link mt-3">
       Hesabınız yok mu? <a routerLink="/register">Kaydolun</a>
     </div>
   </form>

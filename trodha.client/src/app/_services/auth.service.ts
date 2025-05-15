@@ -10,7 +10,7 @@ import { AuthResponse, LoginRequest, RegisterRequest, User } from '../_models/us
 export class AuthService {
   private currentUserSubject: BehaviorSubject<User | null>;
   public currentUser: Observable<User | null>;
-  private apiUrl = 'https://localhost:7182/api/auth';
+  private apiUrl = 'http://localhost:5253/api/auth';
   constructor(private http: HttpClient) {
     const userJson = localStorage.getItem('currentUser');
     this.currentUserSubject = new BehaviorSubject<User | null>(userJson ? JSON.parse(userJson) : null);
@@ -79,7 +79,7 @@ export class AuthService {
         }
       } else if (error.status === 401) {
         errorMessage = 'Yetkilendirme hatası. Lütfen tekrar giriş yapın.';
-        this.logout(); 
+        this.logout();
       } else if (error.status === 404) {
         errorMessage = 'İstenilen kaynak bulunamadı.';
       } else if (error.status === 500) {

@@ -26,14 +26,18 @@
         <ul class="navbar-nav">
           <ng-container *ngIf="currentUser; else loginItems">
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 {{ currentUser.firstName }} {{ currentUser.lastName }}
               </a>
-              <ul class="dropdown-menu dropdown-menu-end">
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" routerLink="/profile">Profilim</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="javascript:void(0)" (click)="logout()">Çıkış Yap</a></li>
               </ul>
+            </li>
+            <!-- Mobil görünümde doğrudan çıkış butonu -->
+            <li class="nav-item d-lg-none mt-2">
+              <button class="btn btn-outline-light" (click)="logout()">Çıkış Yap</button>
             </li>
           </ng-container>
 

@@ -7,6 +7,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { AuthService } from '../../_services/auth.service';
 
+// Yorum satırı ekleme.
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -40,6 +42,14 @@ export class LoginComponent implements OnInit {
 
     // returnUrl'i al
     this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+  }
+
+  // Admin olarak giriş yapmak için
+  loginAsAdmin(): void {
+    this.loginForm.patchValue({
+      email: 'admin@admin.com',
+      password: 'admin123'
+    });
   }
 
   // getter for easy access to form fields

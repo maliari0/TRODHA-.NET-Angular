@@ -8,7 +8,7 @@ import { CreateUserNote, NoteImage, UpdateUserNote, UserNote } from '../_models/
   providedIn: 'root'
 })
 export class NoteService {
-  private apiUrl = '/api/notes';
+  private apiUrl = 'http://localhost:5253/api/notes';
 
   constructor(private http: HttpClient) { }
 
