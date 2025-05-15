@@ -1,10 +1,12 @@
-# TRODHA - Kişisel Hedef Takip Sistemi
+# TRODHA - Ağız ve Diş Sağlığı Hedef Takip Sistemi
 
-TRODHA, kullanıcıların kişisel hedeflerini belirlemelerine, takip etmelerine ve bu hedeflere ulaşma süreçlerini yönetmelerine yardımcı olan kapsamlı bir web uygulamasıdır. Modern bir arayüz ve güçlü bir altyapı ile kullanıcıların hedeflerine odaklanmalarını ve ilerlemelerini izlemelerini sağlar.
+TRODHA (Türkiye Oral ve Dental Hijyen Asistanı), kullanıcıların ağız ve diş sağlığı ile ilgili hedeflerini belirlemelerine, takip etmelerine ve bu hedeflere ulaşma süreçlerini yönetmelerine yardımcı olan kapsamlı bir web uygulamasıdır. Modern bir arayüz ve güçlü bir altyapı ile kullanıcıların diş fırçalama, diş ipi kullanma, ağız bakımı gibi düzenli alışkanlıklar edinmelerine ve bu alışkanlıkları sürdürmelerine destek olur.
 
 ## Proje Hakkında
 
-TRODHA, ASP.NET Core 8.0 backend ve Angular 19 frontend kullanılarak geliştirilmiş bir full-stack web uygulamasıdır. Temiz mimari prensipleri doğrultusunda tasarlanmış olup, katmanlı bir yapıya sahiptir:
+TRODHA, ağız ve diş sağlığı konusunda farkındalık yaratmak ve kullanıcıların düzenli ağız bakımı alışkanlıkları geliştirmelerine yardımcı olmak amacıyla tasarlanmıştır. Uygulama, diş hekimlerinin önerdiği düzenli bakım rutinlerini (günde iki kez diş fırçalama, günlük diş ipi kullanımı, ağız gargarası yapma vb.) takip etmeyi kolaylaştırır ve kullanıcıları bu alışkanlıkları sürdürmeleri için motive eder.
+
+Proje, ASP.NET Core 8.0 backend ve Angular 19 frontend kullanılarak geliştirilmiş bir full-stack web uygulamasıdır. Temiz mimari prensipleri doğrultusunda tasarlanmış olup, katmanlı bir yapıya sahiptir:
 
 - **TRODHA.Core**: Temel veri modelleri ve arayüzler
 - **TRODHA.Infrastructure**: Veritabanı işlemleri ve repository sınıfları
@@ -30,87 +32,95 @@ TRODHA, ASP.NET Core 8.0 backend ve Angular 19 frontend kullanılarak geliştiri
 - "Admin olarak giriş yap" butonu
 - Çıkış yapma fonksiyonu
 
-#### Hedef Yönetimi
-- Hedef oluşturma
-- Hedef listeleme
-- Hedef detaylarını görüntüleme
-- Hedef güncelleme
-- Hedef silme
+#### Ağız ve Diş Sağlığı Hedef Yönetimi
+- Diş fırçalama, diş ipi kullanma, ağız gargarası gibi ağız bakım hedefleri oluşturma
+- Kişiselleştirilmiş hedef sıklığı belirleme (günde 2 kez, haftada 3 kez vb.)
+- Hedefleri önem seviyesine göre kategorize etme
+- Hedef listeleme ve detaylarını görüntüleme
+- Hedef güncelleme ve silme
 - Hedefleri aktif/pasif yapma
 
 #### Hedef Durumu Takibi
-- Hedef durumu ekleme
-- Hedef durumlarını listeleme
-- Hedef durumu silme
-- Tarih aralığına göre filtreleme
+- Günlük diş bakımı kayıtlarını ekleme
+- Tamamlanan ve tamamlanmayan bakım rutinlerini görüntüleme
+- Bakım süresi ve notları kaydetme
+- Tarih aralığına göre filtreleme ve ilerleme takibi
 
-#### Not Yönetimi
-- Not oluşturma
-- Not listeleme
-- Not güncelleme
-- Not silme
+#### Ağız Sağlığı Not Sistemi
+- Diş hekimi ziyaretleri ve tedaviler hakkında notlar oluşturma
+- Ağız bakımı ipuçları ve hatırlatıcılar kaydetme
+- Notları listeleme ve düzenleme
+- Önemli bilgileri kaydetme ve silme
 
-#### Öneriler Sistemi
-- Genel önerileri görüntüleme
-- Kullanıcıya özel önerileri görüntüleme
+#### Ağız ve Diş Sağlığı Önerileri Sistemi
+- Diş hekimleri tarafından onaylanmış genel ağız bakımı önerilerini görüntüleme
+- Kullanıcının ağız sağlığı alışkanlıklarına özel kişiselleştirilmiş öneriler alma
+- Yaş ve ihtiyaca göre özelleştirilmiş bakım tavsiyeleri
 
 #### Dashboard
-- Temel dashboard görünümü
-- Aktif hedefleri görüntüleme
-- Basit istatistikleri görüntüleme
+- Ağız bakımı alışkanlıklarının genel görünümü
+- Aktif diş bakımı hedeflerini görüntüleme
+- Tamamlanan ve eksik bakım rutinlerinin istatistiklerini görüntüleme
+- Ağız sağlığı ilerlemesini takip etme
 
 ### Yarım Kalan Özellikler
 
 #### Kullanıcı Yönetimi
 - Şifre sıfırlama özelliği (backend altyapısı var, frontend tamamlanmamış)
-- Kullanıcı profil sayfası (temel yapı var, detaylar eksik)
+- Kullanıcı profil sayfası ve diş sağlığı bilgileri (temel yapı var, detaylar eksik)
+- Diş hekimi randevularını kaydetme ve hatırlatma sistemi
 
-#### Not Yönetimi
-- Notlara resim ekleme (backend altyapısı hazır, frontend tamamlanmamış)
+#### Ağız Sağlığı Not Sistemi
+- Notlara diş ve ağız sağlığı fotoğrafları ekleme (backend altyapısı hazır, frontend tamamlanmamış)
+- Diş hekimi raporlarını ve reçeteleri kaydetme özelliği
 
 #### Dashboard
-- İleri seviye istatistikler ve grafikler (temel istatistikler var, grafikler eksik)
+- İleri seviye ağız sağlığı istatistikleri ve grafikler
+- Zaman içindeki diş bakımı alışkanlıklarını gösteren grafikler
+- Diş bakımı hedeflerinin tamamlanma oranlarını gösteren görselleştirmeler
 
 ### Eksik Olan Özellikler
 
-#### Admin Paneli
-- Kullanıcı yönetimi
-- Öneri yönetimi
-- Sistem istatistikleri
-- Admin rolü ve yetkilendirme sistemi
+#### Diş Hekimi ve Admin Paneli
+- Kullanıcı ağız sağlığı verilerinin yönetimi
+- Ağız ve diş sağlığı önerilerinin yönetimi
+- Sistem istatistikleri ve kullanıcı davranış analizleri
+- Diş hekimi rolü ve yetkilendirme sistemi
 
 #### Kullanıcı Arayüzü İyileştirmeleri
-- Responsive tasarımın iyileştirilmesi
-- Tema seçenekleri
-- Kullanıcı deneyiminin geliştirilmesi
-- Animasyonlar ve geçişler
+- Mobil cihazlara uyumlu responsive tasarım
+- Gece/gündüz tema seçenekleri
+- Kullanıcı deneyiminin geliştirilmesi ve daha sezgisel arayüz
+- Diş bakımı animasyonları ve eğitici görsel içerikler
 
 #### İleri Seviye Özellikler
-- Hedef hatırlatıcıları
-- Bildirim sistemi
-- Hedef kategorileri
-- Hedef şablonları
+- Diş fırçalama ve bakım hatırlatıcıları
+- Diş hekimi randevu bildirimleri
+- Ağız sağlığı kategorileri (diş, diş eti, dil, vb.)
+- Yaşa ve ihtiyaca göre özelleştirilmiş diş bakımı şablonları
+- Diş hekimleriyle iletişim modülü
 
 ## Teknolojiler
 
 ### Backend
-- ASP.NET Core 8.0
-- Entity Framework Core
-- JWT Authentication
-- SQL Server
-- Clean Architecture
-- Repository Pattern
-- Dependency Injection
-- FluentValidation
+- ASP.NET Core 8.0 - Modern ve yüksek performanslı web API geliştirme
+- Entity Framework Core - Veritabanı işlemleri için ORM
+- JWT Authentication - Güvenli kullanıcı kimlik doğrulama
+- SQL Server - Ağız ve diş sağlığı verilerinin güvenli depolanması
+- Clean Architecture - Sürdürülebilir ve test edilebilir kod yapısı
+- Repository Pattern - Veri erişim katmanı soyutlama
+- Dependency Injection - Bağımlılık yönetimi
+- FluentValidation - Veri doğrulama
 
 ### Frontend
-- Angular 19
-- TypeScript
-- Bootstrap
-- Reactive Forms
-- Angular Router
-- HttpClient
-- RxJS
+- Angular 19 - Modern ve reaktif kullanıcı arayüzü
+- TypeScript - Tip güvenliği ve gelişmiş kod yapısı
+- Bootstrap - Responsive ve mobil uyumlu tasarım
+- Reactive Forms - Dinamik form yönetimi
+- Angular Router - Sayfa yönlendirme ve navigasyon
+- HttpClient - Backend API ile iletişim
+- RxJS - Asenkron veri akışı yönetimi
+- Chart.js - Ağız sağlığı verilerinin görselleştirilmesi
 
 ## Kurulum ve Çalıştırma
 
@@ -123,73 +133,69 @@ TRODHA, ASP.NET Core 8.0 backend ve Angular 19 frontend kullanılarak geliştiri
 ### Adımlar
 
 1. Projeyi klonlayın:
-```
+```bash
 git clone https://github.com/kullanici/TRODHA.git
 cd TRODHA
 ```
 
 2. Veritabanını oluşturun:
-```
+```bash
 cd TRODHA.Server
 dotnet ef database update
 ```
 
 3. Backend'i çalıştırın:
-```
+```bash
 dotnet run
 ```
 
 4. Frontend'i çalıştırın:
-```
+```bash
 cd ../trodha.client
 npm install
 npm start
 ```
 
 5. Tarayıcınızda uygulamayı açın:
-```
+```text
 https://localhost:57438
 ```
 
-## Otomatik Başlatma
-
-Projeyi otomatik olarak başlatmak için kök dizindeki PowerShell scriptlerini kullanabilirsiniz:
-
-```
-.\restart-app-final.ps1
-```
-
-Bu script, backend ve frontend uygulamalarını otomatik olarak başlatacaktır.
 
 ## API Erişimi
 
 Backend API'ye aşağıdaki URL üzerinden erişilebilir:
 
-```
+```text
 http://localhost:5253/api
 ```
 
 Swagger dokümantasyonuna erişmek için:
 
-```
+```text
 http://localhost:5253/swagger
 ```
 
 ## Proje Yapısı
 
-```
+```text
 TRODHA/
-├── TRODHA.Core/                # Temel veri modelleri ve arayüzler
+├── TRODHA.Core/                # Temel veri modelleri ve ağız sağlığı varlıkları
 ├── TRODHA.Infrastructure/      # Veritabanı işlemleri ve repository sınıfları
-├── TRODHA.Application/         # İş mantığı ve servis katmanı
+├── TRODHA.Application/         # Ağız sağlığı iş mantığı ve servis katmanı
 ├── TRODHA.Server/              # API kontrolcüleri ve web sunucusu
 └── trodha.client/              # Angular tabanlı kullanıcı arayüzü
 ```
 
-## Katkıda Bulunma
+## Ağız ve Diş Sağlığı Önemi
 
-Projeye katkıda bulunmak için lütfen bir fork oluşturun ve pull request gönderin. Büyük değişiklikler için, lütfen önce bir issue açarak değişikliği tartışmaya açın.
+TRODHA projesi, düzenli ağız ve diş bakımının önemini vurgulamak ve kullanıcıların sağlıklı alışkanlıklar geliştirmesine yardımcı olmak amacıyla geliştirilmiştir. Düzenli diş fırçalama, diş ipi kullanımı ve ağız bakımı:
 
-## Lisans
+- Diş çürüklerini önler
+- Diş eti hastalıklarını azaltır
+- Ağız kokusunu engeller
+- Genel sağlığa olumlu katkı sağlar
+- Diş kaybını önler ve estetik bir gülüş sunar
 
-Bu proje [MIT Lisansı](LICENSE) altında lisanslanmıştır.
+Uygulama, kullanıcıların bu önemli sağlık alışkanlıklarını düzenli olarak takip etmelerine ve sürdürmelerine yardımcı olarak toplum sağlığına katkıda bulunmayı hedeflemektedir.
+
